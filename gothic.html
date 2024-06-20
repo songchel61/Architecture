@@ -1,0 +1,88 @@
+<!Doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>고딕 건축 - 쾰른 대성당</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="고딕 건축 - 쾰른 대성당">
+    <meta property="og:description" content="쾰른 대성당에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/gothic.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>고딕 건축</h1>
+    </header>
+    <section>
+        <h2>쾰른 대성당 소개</h2>
+        <p>쾰른 대성당은 독일 쾰른에 위치한 고딕 양식의 대성당으로, 1248년에 건축이 시작되어 1880년에 완성되었습니다. 이 성당은 유네스코 세계유산으로 지정되어 있으며, 그 웅장한 규모와 아름다운 고딕 건축 양식으로 유명합니다.</p>
+        <p>쾰른 대성당은 독일에서 가장 큰 성당 중 하나로, 높이 157미터의 두 개의 첨탑이 하늘을 찌를 듯 서 있습니다. 이 성당은 전 세계에서 세 번째로 높은 교회 건물로, 매년 수백만 명의 관광객이 방문합니다. 대성당의 외관은 섬세한 조각과 복잡한 세부 장식으로 이루어져 있으며, 고딕 건축의 정수를 보여줍니다.</p>
+        <p>대성당 내부는 높은 천장과 아름다운 스테인드글라스 창문으로 장식되어 있으며, 특히 '서쪽 창문'은 그 아름다움과 규모로 유명합니다. 이 창문은 중세 시대의 성경 이야기를 담고 있는 다양한 장면들을 묘사하고 있습니다. 또한, 대성당의 중앙에는 대규모의 장엄한 제단이 있으며, 이곳에서 다양한 종교 행사와 미사가 열립니다.</p>
+        <p>쾰른 대성당은 건축 기간 동안 여러 차례 중단과 재개를 반복했습니다. 16세기 중반, 종교 개혁과 재정 문제로 인해 공사가 중단되었고, 이후 19세기 중반에 들어서야 독일 통일을 상징하는 의미로 공사가 재개되었습니다. 1880년, 대성당은 마침내 완성되었으며, 이는 중세 고딕 건축 양식의 완성을 의미하는 중요한 사건으로 기록되었습니다.</p>
+        <p>이 성당은 또한 제2차 세계대전 동안에도 큰 피해를 입지 않고 비교적 온전한 상태를 유지했습니다. 이는 전쟁 후 독일의 재건 과정에서 중요한 문화재로서 보존될 수 있었던 이유 중 하나입니다. 오늘날 쾰른 대성당은 독일의 중요한 역사적, 문화적 유산으로서, 종교적 의미뿐만 아니라 예술적 가치도 지니고 있습니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/0DxhQfazxG0" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Cologne+Cathedral,+Cologne,+Germany";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

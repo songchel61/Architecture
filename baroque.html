@@ -1,0 +1,88 @@
+<!Doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>바로크 건축 - 베르사유 궁전</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="바로크 건축 - 베르사유 궁전">
+    <meta property="og:description" content="베르사유 궁전에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/baroque.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>바로크 건축</h1>
+    </header>
+    <section>
+        <h2>베르사유 궁전 소개</h2>
+        <p>베르사유 궁전은 프랑스 베르사유에 위치한 바로크 양식의 궁전으로, 루이 14세에 의해 건축되었습니다. 이 궁전은 웅장하고 화려한 바로크 건축의 대표적인 예로, 프랑스 절대왕정의 상징으로 여겨집니다.</p>
+        <p>베르사유 궁전은 17세기 후반에 건설되었으며, 그 규모와 화려함으로 세계적으로 유명합니다. 궁전 내부는 아름다운 장식과 고급스러운 가구들로 채워져 있으며, 특히 거울의 방은 베르사유 궁전의 하이라이트 중 하나입니다. 이 방은 357개의 거울과 17개의 창문으로 구성되어 있으며, 태양의 빛이 반사되어 환상적인 장면을 연출합니다.</p>
+        <p>궁전 주변에는 광대한 정원이 조성되어 있으며, 조각상과 분수들이 배치되어 있습니다. 이 정원은 바로크 양식의 정원 디자인의 정수를 보여줍니다. 정원에는 대운하와 수많은 분수들이 있으며, 특히 그랑 트리아농과 프티 트리아농은 왕가의 휴식처로 사용되었습니다. 또한, 정원에는 다양한 식물과 꽃들이 심어져 있어 계절마다 다른 아름다움을 자랑합니다.</p>
+        <p>베르사유 궁전은 루이 16세와 마리 앙투아네트가 거주했던 곳으로도 유명하며, 프랑스 혁명의 중요한 무대 중 하나입니다. 1789년 혁명군이 베르사유 궁전을 습격한 사건은 프랑스 혁명의 시작을 알리는 중요한 사건이었습니다. 그 이후로 궁전은 여러 용도로 사용되었으며, 현재는 박물관으로 개조되어 수많은 예술 작품과 역사적 유물을 전시하고 있습니다.</p>
+        <p>오늘날 베르사유 궁전은 유네스코 세계유산으로 등재되어 있으며, 매년 수백만 명의 관광객이 방문하는 프랑스의 주요 관광 명소 중 하나입니다. 이 궁전은 프랑스 역사와 문화의 중요한 부분으로, 그 웅장함과 아름다움으로 인해 방문객들에게 깊은 인상을 남깁니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LisRJxCHaPA" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Versailles+Palace,+Versailles,+France";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

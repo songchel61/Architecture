@@ -1,0 +1,88 @@
+<!Doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>근대 건축 - 빌라 사보아</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="근대 건축 - 빌라 사보아">
+    <meta property="og:description" content="빌라 사보아에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/modern.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>빌라 사보아</h1>
+    </header>
+    <section>
+        <h2>빌라 사보아 소개</h2>
+        <p>빌라 사보아는 프랑스 푸아시 근처에 위치한 근대 건축의 대표적인 예로, 르 코르뷔지에에 의해 설계되었습니다. 이 건물은 1929년에서 1931년 사이에 건축되었으며, 기능성과 단순성을 강조한 디자인으로 유명합니다.</p>
+        <p>빌라 사보아는 근대 건축의 5원칙을 구현한 건축물로, 필로티, 옥상 정원, 자유로운 평면, 수평 창문, 자유로운 파사드를 특징으로 합니다. 이 건물은 근대 건축의 혁신적인 아이디어를 담고 있으며, 오늘날에도 많은 건축가들에게 영감을 주고 있습니다.</p>
+        <p>빌라 사보아는 철근 콘크리트 구조를 사용하여 개방감과 유연성을 강조하였으며, 내부 공간은 기능에 따라 유동적으로 배치되었습니다. 이는 당시 전통적인 건축 방식과는 크게 대조되는 혁신적인 접근법이었습니다.</p>
+        <p>르 코르뷔지에의 디자인 철학은 빌라 사보아에서 잘 드러납니다. 그는 건축이 기계처럼 기능해야 한다고 주장했으며, 이를 통해 인간의 생활을 개선하고자 했습니다. 빌라 사보아는 이러한 철학을 반영한 대표적인 작품으로, 근대 건축의 아이콘으로 자리잡았습니다.</p>
+        <p>오늘날 빌라 사보아는 건축학적으로 중요한 문화유산으로 인정받고 있으며, 많은 사람들이 이 건물을 방문하여 근대 건축의 아름다움과 혁신을 경험하고 있습니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/K9AsJSxpxcg?start=789" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Villa+Savoye,+Poissy,+France";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
