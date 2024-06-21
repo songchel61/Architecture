@@ -1,0 +1,88 @@
+<!Doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>한국의 유명 건축물 - 경복궁</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="한국의 유명 건축물 - 경복궁">
+    <meta property="og:description" content="경복궁에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/gyeongbokgung.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header class="gyeongbokgung-header">
+        <h1>경복궁</h1>
+    </header>
+    <section>
+        <h2>경복궁 소개</h2>
+        <p>경복궁은 대한민국 서울특별시에 위치한 조선시대의 궁궐로, 1395년에 태조 이성계에 의해 건립되었습니다. 조선왕조의 법궁이자 주요 궁궐로서, 조선의 정치, 문화, 역사의 중심지였습니다. 경복궁은 조선왕조의 법궁으로서 중요한 역할을 하였으며, 그 건축적 아름다움과 역사적 가치를 인정받아 많은 사람들에게 사랑받고 있습니다.</p>
+        <p>경복궁의 주요 건물로는 근정전, 경회루, 사정전, 강녕전 등이 있으며, 각각의 건물은 독특한 건축 양식과 아름다움을 자랑합니다. 특히, 근정전은 조선왕조의 중심 건물로서 왕이 즉위식을 거행하고 국가의 중요한 의식을 행했던 장소입니다. 경회루는 연못 위에 지어진 누각으로, 그 아름다움과 독특한 건축 양식으로 유명합니다.</p>
+        <p>경복궁은 조선시대의 대표적인 궁궐 건축 양식을 보여주는 중요한 문화유산입니다. 경복궁의 건축 양식은 전통적인 한옥 구조를 기반으로 하여, 기둥과 보의 조합을 통해 구조적 안정성을 확보하였습니다. 또한, 화려한 단청과 정교한 조각들이 경복궁의 미적 가치를 더해줍니다.</p>
+        <p>일제강점기 동안 경복궁은 많은 부분이 파괴되고 훼손되었으나, 광복 이후 여러 차례의 복원 작업을 통해 그 원형을 되찾고 있습니다. 오늘날 경복궁은 대한민국의 중요한 역사적, 문화적 명소로 자리잡고 있으며, 많은 관광객들이 경복궁을 방문하여 그 아름다움과 역사를 체험하고 있습니다.</p>
+        <p>경복궁은 그 건축적 가치뿐만 아니라, 조선왕조의 역사와 문화를 이해하는 데 중요한 역할을 합니다. 이 궁궐은 한국의 전통 건축을 대표하는 예로서, 그 보존과 관리는 후손들에게 중요한 문화유산을 전달하는 중요한 과제입니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/lF1P-nH2oTw" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Gyeongbokgung,+Seoul,+South+Korea";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

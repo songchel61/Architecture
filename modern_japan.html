@@ -1,0 +1,88 @@
+<!Doctype html>
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>현대 건축 (일본) - 도쿄 스카이트리</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="현대 건축 (일본) - 도쿄 스카이트리">
+    <meta property="og:description" content="도쿄 스카이트리에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/modern_japan.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header class="modern-japan-header">
+        <h1>현대 건축 (일본)</h1>
+    </header>
+    <section>
+        <h2>도쿄 스카이트리 소개</h2>
+        <p>도쿄 스카이트리는 일본 도쿄에 위치한 현대 건축물로, 높이 634미터의 방송 송신탑입니다. 이 건물은 2012년에 완공되었으며, 일본의 기술력과 현대 건축의 아름다움을 잘 보여줍니다.</p>
+        <p>도쿄 스카이트리는 일본에서 가장 높은 구조물로, 세계에서 두 번째로 높은 타워입니다. 이 타워는 방송 송신을 주요 목적으로 하지만, 전망대와 상업 시설도 갖추고 있어 관광객들에게 큰 인기를 끌고 있습니다.</p>
+        <p>타워의 디자인은 일본 전통 건축과 현대적인 요소를 결합한 것이 특징입니다. 특히, 타워의 외관은 일본 전통 건축의 곡선을 반영하여 우아한 느낌을 줍니다. 또한, 타워의 구조는 지진과 강풍에 견딜 수 있도록 설계되었습니다.</p>
+        <p>도쿄 스카이트리의 전망대는 350미터와 450미터 높이에 위치해 있으며, 이곳에서 도쿄 전역을 한눈에 내려다볼 수 있습니다. 특히, 날씨가 맑은 날에는 후지산까지도 볼 수 있습니다. 이 타워는 야경이 아름답기로 유명하며, 밤에는 다양한 조명 연출로 방문객들에게 특별한 경험을 선사합니다.</p>
+        <p>도쿄 스카이트리는 현대 일본의 상징으로서, 그 혁신적인 디자인과 기능성으로 많은 찬사를 받고 있습니다. 이 타워는 일본의 현대 건축을 대표하는 중요한 건축물 중 하나로, 매년 수많은 관광객이 찾는 명소입니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/NZrPXPF_n6I" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Tokyo+Skytree,+Tokyo,+Japan";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

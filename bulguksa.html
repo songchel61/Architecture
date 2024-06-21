@@ -1,0 +1,88 @@
+<!Doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>한국의 유명 건축물 - 불국사</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="한국의 유명 건축물 - 불국사">
+    <meta property="og:description" content="불국사에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/bulguksa.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header class="bulguksa-header">
+        <h1>불국사</h1>
+    </header>
+    <section>
+        <h2>불국사 소개</h2>
+        <p>불국사는 대한민국 경상북도 경주시에 위치한 신라 시대의 대표적인 사찰로, 528년에 법흥왕에 의해 창건되었습니다. 이 사찰은 한국 불교 건축의 걸작으로 여겨지며, 그 아름다움과 역사적 가치를 인정받아 유네스코 세계유산으로 등재되었습니다.</p>
+        <p>불국사의 주요 건물로는 대웅전, 무설전, 극락전 등이 있으며, 각각의 건물은 신라 시대의 독특한 건축 양식과 아름다움을 자랑합니다. 특히, 대웅전은 불국사의 중심 건물로서, 석가모니 불상을 모시고 있는 곳입니다. 이 건물은 기둥과 보의 조합을 통해 구조적 안정성을 확보하였으며, 그 섬세한 장식과 화려한 단청으로 방문객들의 눈길을 사로잡습니다.</p>
+        <p>불국사는 또한 다양한 석조물이 유명합니다. 다보탑과 석가탑은 불국사의 대표적인 석탑으로, 각각 독특한 디자인과 정교한 조각으로 유명합니다. 이 탑들은 신라 시대의 뛰어난 석조 기술을 잘 보여줍니다. 또한, 불국사 경내에는 많은 불상과 비석들이 있어, 신라 시대의 불교 문화와 예술을 엿볼 수 있습니다.</p>
+        <p>불국사는 여러 차례의 전쟁과 화재로 인해 많은 부분이 소실되었으나, 여러 차례의 복원 작업을 통해 그 원형을 되찾고 있습니다. 오늘날 불국사는 대한민국의 중요한 역사적, 문화적 명소로 자리잡고 있으며, 많은 관광객들이 불국사를 방문하여 그 아름다움과 역사를 체험하고 있습니다.</p>
+        <p>불국사는 그 건축적 가치뿐만 아니라, 한국 불교의 역사와 문화를 이해하는 데 중요한 역할을 합니다. 이 사찰은 한국의 전통 건축을 대표하는 예로서, 그 보존과 관리는 후손들에게 중요한 문화유산을 전달하는 중요한 과제입니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MhAvb9fuEVY" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Bulguksa,+Gyeongju,+South+Korea";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

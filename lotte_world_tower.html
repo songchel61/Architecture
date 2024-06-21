@@ -1,0 +1,88 @@
+<!Doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>현대 건축 (한국) - 롯데월드타워</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="현대 건축 (한국) - 롯데월드타워">
+    <meta property="og:description" content="롯데월드타워에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/lotte_world_tower.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header class="lotte-world-tower-header">
+        <h1>롯데월드타워</h1>
+    </header>
+    <section>
+        <h2>롯데월드타워 소개</h2>
+        <p>롯데월드타워는 대한민국 서울특별시에 위치한 초고층 빌딩으로, 2016년에 완공되었습니다. 이 타워는 높이 555미터로, 대한민국에서 가장 높은 건축물이며, 세계에서 다섯 번째로 높은 빌딩입니다.</p>
+        <p>롯데월드타워는 다양한 용도로 사용되며, 상업 시설, 사무실, 호텔, 전망대, 레지던스 등이 포함되어 있습니다. 특히, 123층에 위치한 서울스카이는 방문객들에게 서울의 파노라마 뷰를 제공하는 유명한 관광 명소입니다.</p>
+        <p>타워의 디자인은 한국의 전통 도자기와 붓의 곡선을 모티브로 하여, 우아하고 현대적인 느낌을 줍니다. 또한, 구조적으로도 지진과 강풍에 견딜 수 있도록 설계되어, 안전성을 확보하였습니다.</p>
+        <p>롯데월드타워는 에너지 효율성과 친환경 기술을 도입한 건축물로, LEED 골드 등급을 획득하였습니다. 이는 현대 건축에서 중요한 지속 가능성을 반영한 것입니다.</p>
+        <p>이 타워는 한국의 경제적, 문화적 상징으로서, 국내외 많은 관광객들에게 사랑받고 있습니다. 또한, 롯데월드타워는 서울의 스카이라인에서 중요한 랜드마크로 자리잡고 있습니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/f8GPs4Pmlvo" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Lotte+World+Tower,+Seoul,+South+Korea";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

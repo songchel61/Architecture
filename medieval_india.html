@@ -1,0 +1,89 @@
+<!Doctype html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>중세 건축 (인도) - 카주라호 사원</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- 파비콘 설정 -->
+    <link rel="icon" href="assets/logo/logo.png" type="image/png">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/png">
+    <!-- Open Graph 메타 태그 -->
+    <meta property="og:title" content="중세 건축 (인도) - 카주라호 사원">
+    <meta property="og:description" content="카주라호 사원에 대한 자세한 소개와 영상">
+    <meta property="og:image" content="https://songchel61.github.io/architecture/assets/images/profile.webp">
+    <meta property="og:url" content="https://songchel61.github.io/architecture/medieval_india.html">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <nav>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html">
+                <span class="highlight">A</span>rchitec<span class="highlight">T</span>ure
+            </a>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+    <header class="medieval-india-header">
+        <h1>중세 건축 (인도)</h1>
+    </header>
+    <section>
+        <h2>카주라호 사원 소개</h2>
+        <p>카주라호 사원은 인도 마디아프라데시 주에 위치한 중세 힌두교와 자이나교 사원 군으로, 인도 중세 건축의 중요한 예입니다. 이 사원들은 950년에서 1050년 사이에 찬델라 왕조에 의해 건축되었습니다. 카주라호 사원은 정교한 조각과 건축적 아름다움으로 유명하며, 유네스코 세계유산으로 등재되어 있습니다.</p>
+        <p>카주라호 사원의 주요 특징은 정교하고 세밀한 조각입니다. 사원의 외벽과 내부는 신화적 이야기와 일상 생활을 묘사한 조각들로 덮여 있습니다. 이러한 조각들은 그 시대의 예술적, 종교적, 사회적 삶을 잘 반영하고 있습니다.</p>
+        <p>카주라호 사원군은 크게 동부, 서부, 남부 세 구역으로 나뉩니다. 각 구역에는 여러 개의 사원이 있으며, 그 중에서도 칸다리아 마하데바 사원은 가장 유명합니다. 이 사원은 그 아름다움과 규모로 방문객들의 마음을 사로잡습니다. 사원의 중앙에는 주요 신상이 모셔져 있으며, 그 주위로 다양한 신화적 장면들이 조각되어 있습니다.</p>
+        <p>카주라호 사원은 건축학적 아름다움 외에도 그 역사적 중요성으로 주목받고 있습니다. 이 사원들은 찬델라 왕조의 강력한 권력과 종교적 열정을 상징합니다. 또한, 이 사원들은 인도 중세 시대의 건축 기술과 예술적 성취를 보여줍니다.</p>
+        <p>카주라호 사원은 석재를 사용한 건축물로, 그 구조적 견고함과 정교한 조각으로 유명합니다. 사원은 각종 신화적 장면과 일상 생활을 묘사한 조각들로 장식되어 있으며, 이는 인도 중세 시대의 예술과 문화를 잘 반영하고 있습니다. 또한, 사원 내부의 조각들은 당시의 종교적 신념과 사회적 관습을 잘 보여줍니다.</p>
+        <p>오늘날 카주라호 사원은 전 세계에서 많은 관광객들이 방문하는 중요한 문화유산입니다. 이 사원들은 인도의 건축 유산으로서, 후손들에게 중요한 문화적 가치를 전달하고 있습니다. 카주라호 사원의 보존과 복원은 인도의 역사적 유산을 보호하는 중요한 과제입니다.</p>
+        <h3>소개 영상</h3>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/thjNReaiw9Q?start=1763" frameborder="0" allowfullscreen></iframe>
+    </section>
+    <section class="location-search">
+        <div class="welcome-hero-serch-box">
+            <div class="welcome-hero-form">
+                <div class="single-welcome-hero-form">
+                    <h3 class="location-title">위치</h3>
+                    <form action="index.html">
+                        <input type="text" id="locationInput" placeholder="Ex: 출발위치를 적어주세요." />
+                    </form>
+                    <div class="welcome-hero-form-icon">
+                        <i class="flaticon-gps-fixed-indicator"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-hero-serch">
+                <button class="welcome-hero-btn" id="searchButton">
+                    search  <i data-feather="search"></i> 
+                </button>
+            </div>
+        </div>
+    </section>
+    <div id="footer">
+        손에 잡히는 프로그래밍(웹) 제출 과제 / Seongcheol Bae. All Rights Reserved.
+    </div>
+    <button id="scrollTopBtn" title="맨 위로">&#8679;</button>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var searchButton = document.getElementById('searchButton');
+            searchButton.addEventListener('click', function() {
+                var locationInput = document.getElementById('locationInput');
+                var locationValue = locationInput.value.trim();
+                if (locationValue !== "") {
+                    var encodedLocation = encodeURIComponent(locationValue);
+                    var googleMapURL = "https://www.google.com/maps/dir/"+ encodedLocation +"/Khajuraho+Temples,+Madhya+Pradesh,+India";
+                    window.open(googleMapURL, "_blank");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
